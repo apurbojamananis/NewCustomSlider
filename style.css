@@ -89,6 +89,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+  cursor: pointer;
 }
 .left-tab-btn button:nth-child(2) {
   border-bottom: none;

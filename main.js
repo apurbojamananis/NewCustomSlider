@@ -9,6 +9,55 @@ const progressBarsContainerTwo = document.querySelector(".progress-bars-Two");
 const progressBarsContainerThree = document.querySelector(
   ".progress-bars-Three"
 );
+const videoSlideOne = document.querySelector(".videoSlideOne");
+const videoSlideTwo = document.querySelector(".videoSlideTwo");
+const videoSlideThree = document.querySelector(".videoSlideThree");
+
+//tab
+
+const details1 = document.getElementById("details1");
+const shopping1 = document.getElementById("shopping1");
+const para1 = document.getElementById("para1");
+const details2 = document.getElementById("details2");
+const shopping2 = document.getElementById("shopping2");
+const para2 = document.getElementById("para2");
+const details3 = document.getElementById("details3");
+const shopping3 = document.getElementById("shopping3");
+const para3 = document.getElementById("para3");
+
+tab(details1, shopping1, para1);
+tab(details2, shopping2, para2);
+tab(details3, shopping3, para3);
+
+function tab(details, shopping, para) {
+  shopping.addEventListener("click", () => {
+    para.innerText = `Shopping - Rlife tropical punch is a refeshing and delicious drink that
+            transports you to the beaches of the Caribbean's. Tropical Punch is an  of tropical fruit  that will leave you feeling  and refreshed without the crash! `;
+    shopping.style.borderBottom = "2px solid #ff9700";
+    details.style.borderBottom = "none";
+    gsap.from("p", {
+      x: -100,
+      duration: 1,
+    });
+  });
+  details.addEventListener("click", () => {
+    para.innerText = `Details - Rlife tropical punch is a refeshing and delicious drink that transports you to the beaches of the Caribbean's. Rlife Tropical Punch is an explosion of tropical fruit flavors that will leave you feeling invigorated and refreshed without the crash! `;
+    details.style.borderBottom = "2px solid #ff9700";
+    shopping.style.borderBottom = "none";
+
+    gsap.from("p", {
+      x: -100,
+      duration: 1,
+    });
+  });
+}
+
+// video play
+function playVideo(videoSlide) {
+  if (videoSlide.paused) {
+    videoSlide.play();
+  }
+}
 
 // slider
 
@@ -22,6 +71,9 @@ prevButton.addEventListener("click", () => {
   progressBars(progressBarsContainerTwo);
   progressBars(progressBarsContainerThree);
   gsapAnimation();
+  playVideo(videoSlideOne);
+  playVideo(videoSlideTwo);
+  playVideo(videoSlideThree);
 });
 
 nextButton.addEventListener("click", () => {
@@ -32,6 +84,9 @@ nextButton.addEventListener("click", () => {
   progressBars(progressBarsContainerTwo);
   progressBars(progressBarsContainerThree);
   gsapAnimation();
+  playVideo(videoSlideOne);
+  playVideo(videoSlideTwo);
+  playVideo(videoSlideThree);
 });
 
 function updateSliderPosition() {
