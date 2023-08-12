@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <section class="Header">
+      <h1>New slider</h1>
+    </section>
+
+    <section class="slider-section">
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <video class="background-video" autoplay muted loop>
+              <source src="./video/video.mp4" type="video/mp4" />
+            </video>
+            <div class="content">
+              <div class="left">
+                <h2>Tropical Punch</h2>
+                <div class="left-tab-btn">
+                  <button id="details">Details</button>
+                  <button id="shopping">Shipping</button>
+                </div>
+                <p id="para">
+                  Rlife tropical punch is a refeshing and delicious drink that
+                  transports you to the beaches of the Caribbean's. Rlife
+                  Tropical Punch is an explosion of tropical fruit flavors that
+                  will leave you feeling invigorated and refreshed without the
+                  crash!
+                </p>
+                <button class="btn">Learn More</button>
+              </div>
+              <div class="center center-image-1">
+                <img src="./Img/1.png" alt="Image 1" />
+              </div>
+              <div class="right">
+                <div class="subtitle">
+                  <h4>
+                    <span class="currentSlide">1</span> of
+                    <span class="totalSlide">3</span>
+                  </h4>
+                </div>
+                <div class="image-container right-Image-1">
+                  <img
+                    src="./Img/right-Image-1.png"
+                    alt="Image 2"
+                    class="right-Image-1"
+                  />
+                </div>
+                <div class="progress-bars progress-bars-One">
+                  <div class="progress-bar"><span>Low Calorie</span></div>
+                  <div class="progress-bar"><span>GF Gluten Free</span></div>
+                  <div class="progress-bar"><span>NON GMO</span></div>
+                  <div class="progress-bar"><span>VEGAN</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <video class="background-video" autoplay muted loop>
+              <source src="./video/video.mp4" type="video/mp4" />
+            </video>
+            <div class="content">
+              <div class="left">
+                <h2>Peach Mango Magic</h2>
+                <div class="left-tab-btn">
+                  <button id="details">Details</button>
+                  <button id="shopping">Shipping</button>
+                </div>
+                <p id="para">
+                  Rlife tropical punch is a refeshing and delicious drink that
+                  transports you to the beaches of the Caribbean's. Rlife
+                  Tropical Punch is an explosion of tropical fruit flavors that
+                  will leave you feeling invigorated and refreshed without the
+                  crash!
+                </p>
+                <button class="btn">Learn More</button>
+              </div>
+              <div class="center center-image-2">
+                <img src="./Img/3.png" alt="Image 1" />
+              </div>
+              <div class="right">
+                <div class="subtitle">
+                  <h4>
+                    <span class="currentSlide">2</span> of
+                    <span class="totalSlide">3</span>
+                  </h4>
+                </div>
+                <div class="image-container right-Image-2">
+                  <img src="./Img/right-Image-2.png" alt="Image 2" />
+                </div>
+                <div class="progress-bars progress-bars-Two">
+                  <div class="progress-bar"><span>Low Calorie</span></div>
+                  <div class="progress-bar"><span>GF Gluten Free</span></div>
+                  <div class="progress-bar"><span>NON GMO</span></div>
+                  <div class="progress-bar"><span>VEGAN</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <video class="background-video" autoplay muted loop>
+              <source src="./video/video.mp4" type="video/mp4" />
+            </video>
+            <div class="content">
+              <div class="left">
+                <h2>Cherry-Berry Booster</h2>
+                <div class="left-tab-btn">
+                  <button id="details">Details</button>
+                  <button id="shopping">Shipping</button>
+                </div>
+                <p id="para">
+                  Rlife tropical punch is a refeshing and delicious drink that
+                  transports you to the beaches of the Caribbean's. Rlife
+                  Tropical Punch is an explosion of tropical fruit flavors that
+                  will leave you feeling invigorated and refreshed without the
+                  crash!
+                </p>
+                <button class="btn">Learn More</button>
+              </div>
+              <div class="center center-image-3">
+                <img src="./Img/2.png" alt="Image 3" />
+              </div>
+              <div class="right">
+                <div class="subtitle">
+                  <h4>
+                    <span class="currentSlide">3</span> of
+                    <span class="totalSlide">3</span>
+                  </h4>
+                </div>
+                <div class="image-container right-Image-3">
+                  <img
+                    src="./Img/right-Image-3.png"
+                    alt="Image 2"
+                    id="right-Image-3"
+                  />
+                </div>
+                <div class="progress-bars progress-bars-Three">
+                  <div class="progress-bar"><span>Low Calorie</span></div>
+                  <div class="progress-bar"><span>GF Gluten Free</span></div>
+                  <div class="progress-bar"><span>NON GMO</span></div>
+                  <div class="progress-bar"><span>VEGAN</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control-button" id="prevButton">
+            <img src="./Img/left-arrow.png" alt="" />
+          </button>
+          <button class="control-button" id="nextButton">
+            <img src="./Img/right-arrow.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </body>
+</html>
